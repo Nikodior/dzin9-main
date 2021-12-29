@@ -97,7 +97,7 @@ public class DungeonUtils {
                     dungeonRun.floor = floor; 
                 }  
             } 
-            /*for (String name : TabUtils.getTabList()) {
+              for (String name : TabUtils.getTabList()) {
               if (name.contains("Crypts: ")) {
                 name = Utils.removeFormatting(name);
                 Matcher cryptsMatcher = cryptsPattern.matcher(name);
@@ -125,7 +125,7 @@ public class DungeonUtils {
                 if (nameMatcher.matches())
                   dungeonRun.team.add(nameMatcher.group(1).trim()); 
               } 
-            } */
+            } 
             if (Minecraft.getMinecraft().theWorld != null && dungeonRun != null && ((
               ScoreboardUtils.scoreboardContains("30,30") && (dungeonRun.floor == Floor.FLOOR_1 || dungeonRun.floor == Floor.MASTER_1)) || (
               ScoreboardUtils.scoreboardContains("30,125") && (dungeonRun.floor == Floor.FLOOR_2 || dungeonRun.floor == Floor.MASTER_2)) || (
@@ -144,7 +144,7 @@ public class DungeonUtils {
         this.counter++;
       }
       
-      /*
+      
       public static void debug() {
         if (Utils.inDungeons && dungeonRun != null) {
           Utils.sendModMessage("Floor: " + dungeonRun.floor.name());
@@ -177,7 +177,7 @@ public class DungeonUtils {
       private static int calculateBonusScore() {
         return (MayorAPI.isPaulBonus() ? 10 : 0) + (dungeonRun.mimicFound ? 5 : 0) + MathHelper.clamp(dungeonRun.cryptsFound, 0, 5);
       }
-      */
+      
       @SubscribeEvent
       public void onEntityDeath(LivingDeathEvent event) {
         if (onFloorWithMimic() && !dungeonRun.mimicFound && 
