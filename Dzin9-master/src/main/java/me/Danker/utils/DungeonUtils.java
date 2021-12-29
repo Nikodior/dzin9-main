@@ -156,7 +156,7 @@ public class DungeonUtils {
         } 
       }
 
-      public static int calculateScore() {
+      /* public static int calculateScore() {
         if (dungeonRun == null || DungeonMap.activeDungeonLayout == null)
           return 0; 
         return calculateSkillScore() + calculateExploreScore() + calculateSpeedScore() + calculateBonusScore();
@@ -176,7 +176,7 @@ public class DungeonUtils {
       
       private static int calculateBonusScore() {
         return (MayorAPI.isPaulBonus() ? 10 : 0) + (dungeonRun.mimicFound ? 5 : 0) + MathHelper.clamp(dungeonRun.cryptsFound, 0, 5);
-      }
+      } */
       
       @SubscribeEvent
       public void onEntityDeath(LivingDeathEvent event) {
